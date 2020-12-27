@@ -339,7 +339,7 @@ FROM (
                 z_order
          FROM osm_highway_linestring
          WHERE NOT is_area
-           AND zoom_level = 12 AND man_made <> 'pier'
+           AND zoom_level >= 12 AND man_made <> 'pier'
          UNION ALL
 
          -- etldoc: osm_railway_linestring_gen_z8  ->  layer_transportation:z8
