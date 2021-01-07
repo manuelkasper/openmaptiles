@@ -40,9 +40,11 @@ BEGIN
                 SELECT (array_agg(dta.osm_id))[1] AS osm_id,
                     ST_Buffer(
                         ST_Union(
-                            ST_Buffer(
-                                ST_SnapToGrid(dta.geometry, 0.000001)
-                                , zres14, 'join=mitre')
+                            ST_MakeValid(
+                                ST_Buffer(
+                                    ST_SnapToGrid(dta.geometry, 0.000001)
+                                    , zres14, 'join=mitre')
+                                )
                             )
                         , -zres14, 'join=mitre') AS geometry
                 FROM dta
