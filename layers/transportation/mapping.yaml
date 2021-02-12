@@ -315,6 +315,13 @@ tables:
       aerialway:
       - cable_car
       - gondola
+      - mixed_lift
+      - chair_lift
+      - drag_lift
+      - t-bar
+      - j-bar
+      - platter
+      - rope_tow
 
 # etldoc: imposm3 -> osm_shipway_linestring
   shipway_linestring:
